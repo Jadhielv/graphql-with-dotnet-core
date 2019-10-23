@@ -2,6 +2,7 @@
 using GraphQL.Types;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace App
 {
@@ -12,7 +13,8 @@ namespace App
             var schema = Schema.For(@"
                 type Jedi {
                     name: String,
-                    side: String
+                    side: String,
+                    id: ID
                 }
 
                 type Query {
@@ -25,12 +27,18 @@ namespace App
                     _.Types.Include<Query>();
                 });
 
-            var json = schema.Execute(_ =>
+            var jsonAllData = schema.Execute(_ =>
             {
-                _.Query = "{ jedis { name, side } }";
+                _.Query = "{ jedis { id, name, side } }";
             });
 
-            Console.WriteLine(json);
+            var jsonWParameter = schema.Execute(_ =>
+            {
+                _.Query = "{ jedi(id: 3) { name } }";
+            });
+
+            Console.WriteLine(jsonAllData);
+            Console.WriteLine(jsonWParameter);
         }
     }
     public class Query
@@ -45,6 +53,12 @@ namespace App
         public string GetHello()
         {
             return "Hello Query Class";
+        }
+
+        [GraphQLMetadata("jedi")]
+        public Jedi GetJedi(int id)
+        {
+            return StarWarsDB.GetJedis().SingleOrDefault(x => x.Id == id);
         }
     }
 }
