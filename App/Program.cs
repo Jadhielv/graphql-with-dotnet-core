@@ -1,6 +1,7 @@
-﻿using System;
-using GraphQL;
+﻿using GraphQL;
 using GraphQL.Types;
+using System;
+using System.Collections.Generic;
 
 namespace App
 {
@@ -8,7 +9,6 @@ namespace App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             var schema = Schema.For(@"
                 type Jedi {
                     name: String,
@@ -24,17 +24,14 @@ namespace App
                     _.Types.Include<Query>();
                 });
 
-            var root = new { Hello = "Hello World!" };
             var json = schema.Execute(_ =>
             {
-                _.Query = "{ hello }";
-                _.Root = root;
+                _.Query = "{ jedis { name, side } }";
             });
 
             Console.WriteLine(json);
         }
     }
-
     public class Query
     {
         [GraphQLMetadata("jedis")]
@@ -46,13 +43,7 @@ namespace App
         [GraphQLMetadata("hello")]
         public string GetHello()
         {
-            return "Hello Query class";
+            return "Hello Query Class";
         }
-
-        public static IEnumerable<Jedi> GetJedis() => new List<Jedi>() {
-                new Jedi() { Name ="Luke", Side="Light"},
-                new Jedi() { Name ="Yoda", Side="Light"},
-                new Jedi() { Name ="Darth Vader", Side="Dark"}
-             };
     }
 }
