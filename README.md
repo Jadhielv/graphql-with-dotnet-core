@@ -4,7 +4,7 @@ Learn how you can use GraphQL in .NET Core and C#
 
 Results:
 
-**GetAll**
+## GetAll
 
 ```
 {
@@ -30,7 +30,7 @@ Results:
 }
 ```
 
-**Working with parameters**
+## Working with parameters
 
 ```
 {
