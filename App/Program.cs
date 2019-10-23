@@ -17,7 +17,8 @@ namespace App
 
                 type Query {
                     hello: String,
-                    jedis: [Jedi]
+                    jedis: [Jedi],
+                    jedi(id: ID): Jedi
                 }
                 ", _ =>
                 {
