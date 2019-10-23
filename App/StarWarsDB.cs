@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 public class StarWarsDB
 {
     public static IEnumerable<Jedi> GetJedis() => new List<Jedi>() {
