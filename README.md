@@ -2,8 +2,6 @@
 
 Learn how you can use GraphQL in .NET Core and C#
 
-Results:
-
 ## GetAll
 
 ```
