@@ -4,8 +4,9 @@ Learn how you can use GraphQL in .NET Core and C#
 
 Results:
 
-GetAll
+**GetAll**
 
+```
 {
   "data": {
     "jedis": [
@@ -27,9 +28,11 @@ GetAll
     ]
   }
 }
+```
 
-Working with parameters
+**Working with parameters**
 
+```
 {
   "data": {
     "jedi": {
@@ -37,3 +40,4 @@ Working with parameters
     }
   }
 }
+```
