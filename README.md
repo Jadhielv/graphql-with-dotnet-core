@@ -1,8 +1,17 @@
-# GraphQL in .NET Core and C#
+# GraphQL in .NET Core
 
-Learn how you can use GraphQL in .NET Core and C#
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Jadhielv/graphql-with-dotnet-core/blob/master/LICENSE)
+![GitHub repo size](https://img.shields.io/github/repo-size/jadhielv/graphql-with-dotnet-core)
+![GitHub stars](https://img.shields.io/github/stars/jadhielv/graphql-with-dotnet-core?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/jadhielv?style=social)](https://twitter.com/intent/follow?screen_name=jadhielv)
 
-## GetAll
+## Getting Started
+
+This project is a starting point for a learn how you can use GraphQL in **.NET Core**
+
+### How to Use
+
+**GetAll**
 
 ```
 {
@@ -28,7 +37,7 @@ Learn how you can use GraphQL in .NET Core and C#
 }
 ```
 
-## Working with parameters
+**Working with parameters**
 
 ```
 {
@@ -39,3 +48,8 @@ Learn how you can use GraphQL in .NET Core and C#
   }
 }
 ```
+
+## License
+<!--- If you're not sure which open license to use see https://choosealicense.com/--->
+
+This project uses the following license: [MIT](<https://choosealicense.com/licenses/mit/>)
