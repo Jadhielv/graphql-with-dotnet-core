@@ -1,4 +1,5 @@
 ﻿using GraphQL;
+using GraphQL.SystemTextJson;
 using GraphQL.Types;
 using System;
 using System.Collections.Generic;
@@ -27,18 +28,18 @@ namespace App
                     _.Types.Include<Query>();
                 });
 
-            var jsonAllData = schema.Execute(_ =>
+            var jsonAllData = schema.ExecuteAsync(_ =>
             {
                 _.Query = "{ jedis { id, name, side } }";
             });
 
-            var jsonWParameter = schema.Execute(_ =>
+            var jsonWParameter = schema.ExecuteAsync(_ =>
             {
                 _.Query = "{ jedi(id: 3) { name } }";
             });
 
-            Console.WriteLine(jsonAllData);
-            Console.WriteLine(jsonWParameter);
+            Console.WriteLine(jsonAllData.Result);
+            Console.WriteLine(jsonWParameter.Result);
         }
     }
     public class Query
