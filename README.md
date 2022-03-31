@@ -1,8 +1,6 @@
 # GraphQL in .NET Core
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Jadhielv/graphql-with-dotnet-core/blob/master/LICENSE)
-![GitHub repo size](https://img.shields.io/github/repo-size/jadhielv/graphql-with-dotnet-core)
-![GitHub stars](https://img.shields.io/github/stars/jadhielv/graphql-with-dotnet-core?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/jadhielv?style=social)](https://twitter.com/intent/follow?screen_name=jadhielv)
 
 ## Getting Started
