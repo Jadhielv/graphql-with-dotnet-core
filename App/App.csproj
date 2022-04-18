@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="GraphQL" Version="5.1.1" />
-    <PackageReference Include="GraphQL.SystemTextJson" Version="5.1.0" />
+    <PackageReference Include="GraphQL.SystemTextJson" Version="5.1.1" />
   </ItemGroup>
 
 </Project>
